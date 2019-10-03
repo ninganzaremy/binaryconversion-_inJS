@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>ninganza_Binary representation</title>
+    </head>
+    <body>
+        <h2>This Program will convert number  to binary, octal and hexadecimal</h2>
+        <b>Insert an integer number:</b>
+        <input type="text" name="" value="" id="integ" size=15> &nbsp;&nbsp;
+        <input type="button" name=""  id="convert" value="Convert" onClick=int2bin()>
+        <div class="" id="result">
+
+        </div>
+   <script >
+   function int2bin(){
+       var x = document.getElementById('integ').value;
+       if (x == '' ){
+           alert('you must enter an integer number');
+           document.getElementById('integ').value='';
+           document.getElementById('integ').focus();
+           return false;
+
+       }
+      x = parseInt(x);
+      var bin = x.toString(2);
+      var hexa =x.toString(16);
+      var oct =x.toString(8);
+      var figs="The binary representantion of " + x + " is "+ bin + '<p>'+
+      "The hexadecimal representantion of " + x + " is "+ hexa + '<p>'+
+      "The octdecimal representantion of " + x + " is "+ oct + '<p>'
+
+       document.getElementById('result').innerHTML= figs;
+
+   }
+
+   </script>
+
+
+    </body>
+</html>
